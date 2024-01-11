@@ -20,7 +20,7 @@ cp -Rf tmp/deploy-dist kubernetes/images/frontend
 ##
 ## Build docker image and deploy
 ##
-cd kubernetes/images/frontend
+cd kubernetes/yamls/frontend
 docker build --no-cache -t eventyay/frontend:$TRAVIS_COMMIT .
 docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 docker tag eventyay/frontend:$TRAVIS_COMMIT eventyay/frontend:latest
